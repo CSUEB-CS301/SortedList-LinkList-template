@@ -57,9 +57,13 @@ public:
   //       item is a copy of element at current position.
 
 private:
+  struct NodeT {
+      T info;
+      NodeT* next;
+  };
+
   int length;
-  T info[MAX_ITEMS];
-  int currentPos;
+  NodeT* head;
 };
 
 #include "SortedList.cpp"
